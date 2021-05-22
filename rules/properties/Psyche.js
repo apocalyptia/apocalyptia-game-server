@@ -1,12 +1,14 @@
 const Property = require('../../classes/Property.js')
 
+const formula = `Demeanor x 3`
+
 const Psyche = new Property({
 	name: `Psyche`,
+	formula: formula,
 	desc: [
-		`Psyche = Demeanor x 3`,
+		`Psyche = ${formula}`,
 		`Psyche is a measure of how much Trauma your mind can withstand.`,
 	],
-	formula: ['demeanor'],
 	type: `Property`
 })
 

@@ -8,7 +8,7 @@ const Multilingual = new Ability({
 	],
 	max: 1,
 	experience: 6,
-	opts: LanguageList
+	options: [ ...LanguageList ]
 })
 
 module.exports = Multilingual

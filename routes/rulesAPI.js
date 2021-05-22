@@ -3,10 +3,7 @@ const Rules = require('../rules/Rules.js')
 
 const router = express.Router()
 
-router.get(`/rules`, (req, res) => {
-	console.log('hit route /rules')
-	res.send(JSON.stringify(Rules))
-})
+router.get(`/rules`, (req, res) => res.send(JSON.stringify(Rules)))
 
 // rulesAPI.get(`/rules/:chapter`, (req, res) => {
 // 	console.log('hit /rules/:chapter')

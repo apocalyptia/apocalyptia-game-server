@@ -8,7 +8,9 @@ const Specialize = new Ability({
 	],
 	max: 1,
 	experience: 3,
-	opts: Skills.specs
+	options: Object.values(Skills).map(spec => {
+		return Object.values(spec.specs).map(s => s.name)
+	}).flat()
 })
 
 module.exports = Specialize

@@ -9,14 +9,14 @@ const Unorthodox = new Ability({
 	],
 	max: 1,
 	experience: 9,
-	opts: (function() {
+	options: (() => {
 		const uList = []
-		for (let trait in Traits) {
-			for (let skill in Skills) {
-				const tname = trait.name
-				const sname = skill.name
-				if (skill.parent != trait.name) {
-					uList.push({ name: `${tname} - ${sname}` })
+		for (const trait in Traits) {
+			for (const skill in Skills) {
+				const tname = Traits[trait].name
+				const sname = Skills[skill].name
+				if (skill.parent !== tname) {
+					uList.push(`${tname} - ${sname}`)
 				}
 			}
 		}

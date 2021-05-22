@@ -8,7 +8,7 @@ const Practice = new Ability({
 	],
 	max: 1,
 	experience: 6,
-	opts: Skills.list
+	options: Object.values(Skills).map(s => s.name)
 })
 
 module.exports = Practice

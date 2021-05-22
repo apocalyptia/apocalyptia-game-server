@@ -5,11 +5,11 @@ module.exports = class Ability extends Rule {
 		desc,
 		experience,
 		formula=null,
-		max,
+		max=1,
 		name,
 		notes=``,
-		opts=[],
-		selection=0,
+		options=[],
+		selection=null,
 		type=`Ability`,
 		visible,
 	}) {
@@ -23,7 +23,7 @@ module.exports = class Ability extends Rule {
 		this.formula = formula
 		this.max = max
 		this.notes = notes
-		this.opts = opts
+		this.options = options
 		this.selection = selection
 	}
 }

@@ -1,7 +1,7 @@
 const Rule = require('../../classes/Rule.js')
 const Skills = require('../Skills.js')
 
-const demeanorSkills = Object.values(Skills).filter(skill => skill.parent == 'Agility')
+const demeanorSkills = Object.values(Skills).filter(skill => skill.parent === 'Agility')
 
 const Demeanor = new Rule({
 	name: `Demeanor`,

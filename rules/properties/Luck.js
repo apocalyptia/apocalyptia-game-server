@@ -1,9 +1,12 @@
 const Property = require('../../classes/Property.js')
 
+const formula = `( Agility + Demeanor ) / 2`
+
 const Luck = new Property({
 	name: `Luck`,
+	formula: formula,
 	desc: [
-		`Luck = (Agility + Demeanor) / 2`,
+		`Luck = ${formula}`,
 		`Luck rolls [d6 + current Luck points] are made to determine your fate in matters of pure chance.`,
 		`You may spend 1 Luck Point per round in a dramatic moment for one of the three effects listed below.`,
 		`You regain 1 spent Luck Point at dawn each day.`,
@@ -11,7 +14,6 @@ const Luck = new Property({
 		`• Take an extra Action on your turn.`,
 		`• Give a Luck point to a Comrade.`,
 	],
-	formula: ['agility', 'demeanor'],
 	type: `Property`
 })
 

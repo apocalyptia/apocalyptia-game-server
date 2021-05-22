@@ -9,7 +9,10 @@ const WeaponTraining = new Ability({
 	],
 	max: 1,
 	experience: 3,
-	opts: [ ...Object.values(Melee), ...Object.values(Projectile) ]
+	options: [
+		...Object.values(Melee).map(m => m.name),
+		...Object.values(Projectile).map(p => p.name)
+	]
 })
 
 module.exports = WeaponTraining

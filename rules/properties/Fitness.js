@@ -1,9 +1,12 @@
 const Property = require('../../classes/Property.js')
 
+const formula = `( Agility + Constitution ) / 2`
+
 const Fitness = new Property({
 	name: `Fitness`,
+	formula: formula,
 	desc: [
-		`Fitness = (Agility + Constitution) / 2`,
+		`Fitness = ${formula}`,
 		`This is the rate at which Endurance is regained during rounds where you do not take any Actions.`,
 	],
 	type: `Property`

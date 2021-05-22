@@ -8,7 +8,7 @@ const SelfImprovement = new Ability({
 	],
 	max: 1,
 	experience: 30,
-	opts: Traits.list
+	options: Object.values(Traits).map(s => s.name)
 })
 
 module.exports = SelfImprovement
