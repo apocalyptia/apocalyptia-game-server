@@ -4,7 +4,7 @@ const rulesAPI = require('./routes/rulesAPI.js')
 
 const app = express()
 
-const PORT = process.env.PORT || 666
+const PORT = 6666
 
 app.use(cors())
 app.use(express.json())
