@@ -12,10 +12,16 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors({ origin: '*' }))
 app.use(rulesAPI)
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
 	console.log(
 		`# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n` +
 		`    Apocalyptia Online Game Server running on port: ${PORT}\n` +
 		`# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n`
 	)
+})
+
+process.on('SIGTERM', () => {
+	server.close(() => {
+		console.log('Process terminated.')
+	})
 })
