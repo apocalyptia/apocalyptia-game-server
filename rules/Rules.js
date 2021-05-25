@@ -13,21 +13,19 @@ const Status = require('./Status.js')
 const Traits = require('./Traits.js')
 
 const Rules = {
+	abilities: Abilities,
+	combat: Combat,
+	core: Core,
 	creation: Creation,
-	list: {
-		abilities: Abilities,
-		combat: Combat,
-		core: Core,
-		diseases: Diseases,
-		gear: Gear,
-		hazards: Hazards,
-		maneuvers: Maneuvers,
-		needs: Needs,
-		properties: Properties,
-		skills: Skills,
-		status: Status,
-		traits: Traits
-	}
+	diseases: Diseases,
+	gear: Gear,
+	hazards: Hazards,
+	maneuvers: Maneuvers,
+	needs: Needs,
+	properties: Properties,
+	skills: Skills,
+	status: Status,
+	traits: Traits
 }
 
 module.exports = Rules
